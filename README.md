@@ -12,3 +12,13 @@ To improve resiliency, the servers are deployed in two Availability Zones, by us
 
 > ![VPC](https://github.com/Parth-Dholariya/VPC-Project/assets/92844674/6f68c688-b71a-40b0-b2e4-c246fa244c3c)
 
+## Steps
+
+1. create VPC in the AWS with following resource map in [create VPC](https://github.com/Parth-Dholariya/VPC-Project/tree/main/create%20VPC) folder.
+2. create a launch template as given in [Launch Templates](https://github.com/Parth-Dholariya/VPC-Project/tree/main/Launch%20Templates) folder.
+3. create Auto Scaling Groups with network in private subnet as given in [Auto scaling groups](https://github.com/Parth-Dholariya/VPC-Project/tree/main/Auto%20Scaling%20Groups) folder.
+4. create an bastion host or Jump instance in public subnet to access the private subnet instance using ssh.
+5. now login to any of the private subnet and run you application using "python3 -m http.server 8000" command
+6. create a Application Load Balancer in public subnet with desired ports in security groups, create target group with desired ec2 instances & ports.
+
+now access the deployment by copying the DNS name from load balancer and paste in browser.
